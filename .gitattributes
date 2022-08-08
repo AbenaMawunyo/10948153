@@ -1,2 +1,35 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#include <iostream>
+
+using namespace std;
+
+
+
+
+int main()
+{
+    int input;
+    cout << "input number: "<<endl;
+    cin  >> input ;
+    int validate;
+    int sum;
+    bool isPrime;
+
+    for(int i=1; i<input; i++){
+            for(int e=1; e<i; e++){
+                if ( i % e == 0){
+                    isPrime = false;
+                }
+                isPrime =true;
+            }
+
+
+        if (isPrime = true){
+            sum = sum + i;
+            }
+    }
+
+
+
+    cout << "the sum of it prime: " << sum <<endl;
+    return 0;
+    }
