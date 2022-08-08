@@ -1,35 +1,48 @@
-#include <iostream>
-
-using namespace std;
+// Dorkenoo Elizabeth Mawunyo Abena
 
 
+// Student ID: 10948153
 
-
-int main()
-{
-    int input;
-    cout << "input number: "<<endl;
-    cin  >> input ;
-    int validate;
-    int sum;
-    bool isPrime;
-
-    for(int i=1; i<input; i++){
-            for(int e=1; e<i; e++){
-                if ( i % e == 0){
-                    isPrime = false;
-                }
-                isPrime =true;
-            }
-
-
-        if (isPrime = true){
-            sum = sum + i;
-            }
-    }
-
-
-
-    cout << "the sum of it prime: " << sum <<endl;
-    return 0;
-    }
+#include<iostream> 
+using namespace std; 
+  
+bool isPrime(int n); 
+  
+int main() 
+{   
+  int num, sum=0, count=0; 
+     
+     cout<<"Kindly enter number: "; 
+     cin>>num; 
+      
+  for(int j=0; count<num; j++) 
+  { 
+    if(isPrime(j))  
+    { 
+      sum += j; 
+      count++;   
+    } 
+  } 
+   
+  cout<<"The average of the first "<<num<<" prime numbers is "<<(float)sum/count; 
+} 
+  
+bool isPrime(int n) 
+{ 
+  bool space = true; 
+   
+  if (n<2)    space = false; 
+  else if(n==2)  space = true; 
+  else 
+  { 
+    for(int i=2; i<=n/2; i++) 
+    { 
+      if(n%i==0) 
+      { 
+        space = false; 
+        break; 
+      } 
+    } 
+  }   
+  return space;   
+}
